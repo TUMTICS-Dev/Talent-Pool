@@ -3,7 +3,7 @@ The self-developed talent pool of TUMTICS
 
 ## Prerequisite
 
-* python_version >= "3.7"
+* python_version >= "3.8"
 
 ## Set Up
 
@@ -17,13 +17,6 @@ AIRTABLE_API_KEY=XXXXXXXXXXXXXXXXX
 
 ## Deployment
 
-### Package Management
-
-```shell
-$ pipenv lock -r > requirements.txt
-$ mv requirements.txt ./app
-```
-
 ### Docker-Compose
 
 ```shell
@@ -33,13 +26,20 @@ $ docker-compose down
 
 ## Development
 
-### Package Download
+### flask-portal
+
+```
+$ cd ./flask-portal
+```
+
+#### Package Download and Switch Environment
 
 ```
 $ pipenv install --dev
+$ pipenv shell
 ```
 
-### Unit Test
+#### Unit Test
 
 ```shell
 $ python -m unittest                             # Test all scripts
