@@ -1,4 +1,5 @@
-from db import DB
+from .db import DB
+
 
 def dummy_response():
     return 'Hello'

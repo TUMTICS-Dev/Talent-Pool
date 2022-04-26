@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./tests",
+        "./flask-portal",
         "-p",
         "test_*.py"
     ],
