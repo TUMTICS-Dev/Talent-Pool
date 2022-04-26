@@ -1,9 +1,10 @@
 # Talent-Pool
-The self-developed talent pool of TUMTICS
+The self-developed talent pool of TUMTICS, using Airtalble as its storage space. 
 
 ## Prerequisite
 
 * python_version >= "3.8"
+* [Airtable](https://airtable.com/)
 
 ## Set Up
 
