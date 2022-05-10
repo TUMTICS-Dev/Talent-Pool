@@ -12,10 +12,12 @@ jobs:
 
     runs-on: ubuntu-latest
     env: 
-      directory: ./flask-portal
-
+      working-directory: ./flask-portal
+    defaults:
+      run:
+        working-directory: ${{env.working-directory}}
+        
     steps:
     - uses: actions/checkout@v3
     - name: Unit Tests and Docker Image Build
       run: docker build . --file Dockerfile --tag flask-portal:$(date +%s)
-      working-directory: ./flask-portal
