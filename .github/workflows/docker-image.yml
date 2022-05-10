@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    env: 
+      directory: ./flask-portal
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Unit Tests and Docker Image Build
+      run: docker build . --file Dockerfile --tag flask-portal:$(date +%s)
+      working-directory: ${{env.working-directory}}
