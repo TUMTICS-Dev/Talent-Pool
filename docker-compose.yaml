@@ -8,5 +8,5 @@ services:
     env_file:
       - .env
     ports:
-      - 80:8080
-    command: ["python", "-m", "app.dummy_server"]
+      - 8080:8080
+    command: ["flask", "run", "--host=0.0.0.0", "--port=8080"]

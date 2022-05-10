@@ -3,17 +3,20 @@ The self-developed talent pool of TUMTICS, using Airtalble as its storage space.
 
 ## Prerequisite
 
-* python_version >= "3.8"
 * [Airtable](https://airtable.com/)
+* python_version >= "3.8"
 
 ## Set Up
 
 ### Environmental Variable
 
-Create the .env file: 
+Create the `.env` file: 
 
 ```shell
-AIRTABLE_API_KEY=XXXXXXXXXXXXXXXXX
+export AIRTABLE_API_KEY=XXXXXXXXXXXXXXXXX
+export AIRTABLE_BASE_ID=XXXXXXXXXXXXXXXXX
+export FLASK_APP=<Server Name>      # For Example: app.dummy_server
+export FLASK_ENV=development        # Default: production
 ```
 
 ## Deployment
@@ -47,8 +50,15 @@ $ python -m unittest                             # Test all scripts
 $ python -m unittest tests/test_dummy_server.py  # Test a script
 ```
 
+#### Run
+
+```shell
+$ python app/dummy_server.py
+```
+
 ## References
 
 * [Python Application Layouts: A Reference – Real Python](https://realpython.com/python-application-layouts/)
 * [Testing Python in Visual Studio Code](https://code.visualstudio.com/docs/python/testing)
 * [Getting Started — pyAirtable documentation](https://pyairtable.readthedocs.io/en/latest/getting-started.html)
+* [Welcome to Flask — Flask Documentation (2.1.x)](https://flask.palletsprojects.com/en/2.1.x/)
