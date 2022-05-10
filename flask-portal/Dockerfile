@@ -12,4 +12,4 @@ COPY app app
 COPY tests tests
 RUN python -m unittest
 
-CMD ["python", "-m", "app.dummy_server"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=8080"]

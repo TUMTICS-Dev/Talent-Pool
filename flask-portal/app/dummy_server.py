@@ -1,12 +1,13 @@
-from .db import DB
+from flask import Flask
 
+app = Flask(__name__)
 
 def dummy_response():
-    return 'Hello'
+    return "<p>Hello, World!</p>"
 
-def main():
-    db = DB()
-    print(db.get_table())
+@app.route("/")
+def dummy_server():
+    return dummy_response()
 
 if __name__ == '__main__':
-    main()
+    app.run(host='0.0.0.0', port=8080, debug=True)
