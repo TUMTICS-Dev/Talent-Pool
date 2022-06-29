@@ -1,5 +1,5 @@
 # Talent-Pool
-The self-developed talent pool of TUMTICS, using Airtalble as its storage space. 
+This project is a simple and convenient talent pool developed by TUMTICS, utilizing `Airtalble` as its storage space. 
 
 ## Prerequisite
 
